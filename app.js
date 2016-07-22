@@ -3,7 +3,7 @@ var express = require('express'),
 	port = 3000 || process.env.PORT;
 
 app.get('/', function(req, res){
-	res.json({message: 'working'});
+	res.json({message: 'Davids dads...'});
 });
 
 app.listen(port, function(){
