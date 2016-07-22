@@ -1,0 +1,25 @@
+{
+  "name": "shouts-things",
+  "version": "1.0.0",
+  "description": "GroupMe bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitec54/shouts-things.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whitec54/shouts-things/issues"
+  },
+  "homepage": "https://github.com/whitec54/shouts-things#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
