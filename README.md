@@ -1,4 +1,3 @@
 # Shouts things
----
 
 GroupMe bot
