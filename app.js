@@ -1,10 +1,10 @@
 var express = require('express'),
 	app = express(),
-	port = 3000 || process.env.PORT;
+	router = require('./routes/index');
 
-app.get('/', function(req, res){
-	res.json({message: 'Davids dads...'});
-});
+var port = 3000 || process.env.PORT;
+
+app.use('/', router);
 
 app.listen(port, function(){
 	console.log('Magic happens on port ' + port);
