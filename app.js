@@ -1,6 +1,6 @@
 var express = require('express'),
 	app = express(),
-	port = 3000 || process.env.PORT;
+	port = process.env.PORT || 3000;
 
 //configure app to use bodyParser()
 //this will let us get thedata from a POST
