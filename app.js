@@ -14,6 +14,10 @@ app.get('/', function(req, res){
 	res.json({message: 'Davids dads...'});
 });
 
+app.post('/' function(req, res){
+	res.json(req.body);
+})
+
 app.listen(port, function(){
 	console.log('Magic happens on port ' + port);
 });
