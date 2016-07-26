@@ -1,3 +1,3 @@
 worker: node app.js
-web: index.js
-worker: fancybot1.js
+web: node index.js
+worker: node fancybot1.js
