@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-	res.json(req.body);
+	console.log(req);
 });
 
 app.listen(port, function(){
