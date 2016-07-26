@@ -15,7 +15,13 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-	console.log(req.body);
+	var senderType = req.body.sender_type,
+		text = req.body.text,
+		senderName = req.body.name;
+
+	var message = "'"+text+"'? I guess I'm just FUCKING GAY. Isn't that right "+ senderName+"?";
+
+	console.log(message);
 });
 
 app.listen(port, function(){
