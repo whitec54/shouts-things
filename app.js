@@ -21,6 +21,13 @@ app.post('/', function(req, res){
 
 	var message = "'"+text+"'? I guess I'm just FUCKING GAY. Isn't that right "+ senderName+"?";
 
+	if(senderType == 'user'){
+		res.send(message);
+	}
+	else{
+		log(text);
+	}
+
 	console.log(message);
 });
 
