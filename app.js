@@ -15,9 +15,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-	console.log(req);
-	var message = '"'+req+'"? well I guess I\'m just FUCKING GAY';
-	res.send(message);
+	console.log(req.body);
 });
 
 app.listen(port, function(){
