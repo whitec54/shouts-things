@@ -1,8 +1,10 @@
-var express = require('express'),
-	router = express.Router();
-
 router.get('/', function(req, res){
-	res.json({message: 'working'});
-})
+	console.log(req.url);
 
-module.exports = router;
+	res.json({message: 'Davids dads...'});
+});
+
+router.get('/booze', function(req, res, next) {
+  res.json({'sweat': 'hey there'});
+  next();
+});

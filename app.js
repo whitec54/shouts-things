@@ -1,17 +1,21 @@
-var express = require('express'),
-	app = express(),
-	port = 3000 || process.env.PORT;
+var express = require('express');
+module.exports = router = express.Router();
+var app = express();
+
+var bodyParser = require('body-parser');
 
 //configure app to use bodyParser()
-//this will let us get thedata from a POST
+//this will let us get the data from a request
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
-app.get('/', function(req, res){
-  console.log(req.url);
+var index = require('./routes/index');
+var bot = require('./fancybot1.js');
 
-	res.json({message: 'Davids dads...'});
-});
+var port = 3000 || process.env.PORT;
+
+app.use('/api', router);
+
 
 app.listen(port, function(){
 	console.log('Magic happens on port ' + port);
