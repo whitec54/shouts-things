@@ -38,12 +38,12 @@ app.post('/', function(req, res){
 	    form: {'bot_id': 'f653f0bc7a6d6cb89253872ea2', 'text': message}
 		};
 
-		request(options, function (error, response, body){
-	    if (!error && response.statusCode == 200) {
-
-	        console.log("the request happen")
-	    }
-		});
+		// request(options, function (error, response, body){
+	  //   if (!error && response.statusCode == 200) {
+		//
+	  //       console.log("the request happen")
+	  //   }
+		// });
 	}
 
 	console.log(message);
