@@ -6,6 +6,5 @@ GroupMe bot
 
 Run the following in your terminal:
  ```
-npm install
-nodemon
+npm install -g nodemon
  ```
