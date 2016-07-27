@@ -27,15 +27,23 @@ app.post('/', function(req, res){
 		text = req.body.text,
 		senderName = req.body.name;
 
-	var message = "'"+text+"'? I guess I'm just FUCKING GAY. Isn't that right "+ senderName+"?";
+	var message = "Hello+World+from+a+script,+also+David's+dads+are+gay";
 
 	if(senderType == 'user'){
-		res.writeHead(200);
-		postMessage();
-		res.end();
-	}
-	else{
-		log(text);
+		console.log("IF IS TRUE");
+
+		var options = {
+	    url: 'https://api.groupme.com/v3/bots/post',
+	    method: 'POST',
+	    form: {'bot_id': 'f653f0bc7a6d6cb89253872ea2', 'text': message}
+		};
+
+		request(options, function (error, response, body) {
+	    if (!error && response.statusCode == 200) {
+
+	        console.log("the request happen")
+	    }
+		}
 	}
 
 	console.log(message);
