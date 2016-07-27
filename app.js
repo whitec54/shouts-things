@@ -1,12 +1,20 @@
 var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
-	port = process.env.PORT || 3000;
+	port = process.env.PORT || 3000,
+	request = require('request');
 
 //configure app to use bodyParser()
 //this will let us get thedata from a POST
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
+
+
+request('http://www.google.com', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body) // Show the HTML for the Google homepage.
+  }
+})
 
 app.get('/', function(req, res){
   console.log(req.url);
@@ -22,7 +30,9 @@ app.post('/', function(req, res){
 	var message = "'"+text+"'? I guess I'm just FUCKING GAY. Isn't that right "+ senderName+"?";
 
 	if(senderType == 'user'){
-		res.send(message);
+		res.writeHead(200);
+		postMessage();
+		res.end();
 	}
 	else{
 		log(text);
