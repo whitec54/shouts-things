@@ -27,7 +27,7 @@ app.post('/', function(req, res){
 		text = req.body.text,
 		senderName = req.body.name;
 
-	var message = "Hello+World+from+a+script,+also+David's+dads+are+gay";
+	var message = "'"+text+"'? I guess I'm just FUCKING GAY. Isn't that right" +senderName+"?";
 
 	if(senderType == 'user'){
 		console.log("IF IS TRUE");
